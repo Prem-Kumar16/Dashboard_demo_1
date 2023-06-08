@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: canapp
+
+spec:
+  hostNetwork: true
+  containers:
+    - name: canapp
+      image: 783584839454.dkr.ecr.ap-south-1.amazonaws.com/autodemo:latest 
+      imagePullPolicy: Always
+      ports:
+       - name: http
+         containerPort: 3000
+         protocol: TCP
+  imagePullSecrets:
+    - name: regcred
