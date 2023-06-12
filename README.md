@@ -93,3 +93,7 @@ nano index.js
 ```
 
 The nano editor opens. Inside the index.js file, in the first line change the ip address (10.0.0.7:3000) to your instance's public ip address (public_ip:3000)
+
+### Cleanup
+
+From [CloudFormation](https://console.aws.amazon.com/cloudformation/home) just delete `demo-1-dashboard` stack.
