@@ -2,6 +2,12 @@
 
 The repository contains the instructions and code that allows you to create a single kubernetes pod dashboard demo using virtual can interface
 
+## Overview
+
+The below image is the detailed overview of the following demo
+
+<img width="583" alt="Screenshot 2023-06-20 220123" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/36bc7f78-b368-466d-9303-eb1c065e4ef5">
+
 ## THIS DEMO WILL WORK BEST ON MUMBAI (ap-south-1) region
 
 Deploy EC2 in Mumbai region
