@@ -48,15 +48,7 @@ Note : Give the access & secret access key to the instance via "aws configure" c
 
 ```sh
 aws configure
-git clone https://github.com/Prem-Kumar16/Dashboard_demo_1.git
 cd Dashboard_demo_1/
-```
-Run the below commands to bring the can interface up
-
-```sh
-modprobe vcan
-sudo ip link add dev vcan0 type vcan
-sudo ip link set up vcan0
 ```
 
 Run the below steps to log into ECR Repository for pulling images from it
@@ -92,11 +84,8 @@ To visualize the dashboard running in your ec2 instance, run the commands below 
 
 ```sh
 sudo kubectl exec -it canapp /bin/sh
-cd html
-nano index.js
+node car.js
 ```
-
-The nano editor opens. Inside the index.js file, in the first line change the ip address (10.0.0.7:3000) to your instance's public ip address (public_ip:3000)
 
 ### Cleanup
 
