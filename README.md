@@ -67,6 +67,8 @@ sudo kubectl create secret docker-registry regcred \
    --docker-password=$PASS
 ```
 
+<img width="748" alt="Screenshot 2023-06-20 125347" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/cb8a36ca-05ad-45b2-9782-be832afc7acf">
+
 The below command helps you to run the pod
 
 ```sh
@@ -80,6 +82,8 @@ sudo kubectl get pods
 sudo kubectl describe pods
 ```
 
+<img width="708" alt="Screenshot 2023-06-20 125640" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/98d61c11-cb78-4730-9f44-fc20044fe691">
+
 To visualize the dashboard running in your ec2 instance, run the commands below (Please run the command one by one) 
 
 ```sh
@@ -87,6 +91,22 @@ sudo kubectl exec -it canapp /bin/sh
 node car.js
 ```
 
+Now copy the below url and paste it in any browser to see the demo running
+
+```sh
+http://13.126.233.234:3000/
+```
+
+You should see something similar to the below gif
+
+![giphy](https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/9f4406d6-10b4-4e8a-84ec-fd9e41e54b34)
+
 ### Cleanup
 
 From [CloudFormation](https://console.aws.amazon.com/cloudformation/home) just delete `demo-1-dashboard` stack.
+
+Do not forget to delete the downloaded keypair in cloudshell by running the below command
+
+```sh
+rm keypair-for-ewaol.pem
+```
