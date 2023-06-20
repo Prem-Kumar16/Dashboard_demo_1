@@ -32,7 +32,11 @@ Change the keyid paramater to the output of previous command
 aws ssm get-parameter --name /ec2/keypair/<keyid here> --with-decryption --query Parameter.Value --output text > keypair-for-ewaol.pem
 ```
 
+<img width="911" alt="Screenshot 2023-06-16 085413" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/d3d6379a-c1bf-4ca0-abd4-f8978f98e16e">
+
 Go to actions -> download file and paste this path "/home/cloudshell-user/keypair-for-ewaol.pem" inside the path field to save .pem key file locally
+
+<img width="516" alt="Screenshot 2023-06-16 090012" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/5618f31a-8193-4bdf-aa66-a4be0688886d">
 
 If you go to ec2 instances page, you will find a newly created instance named "EWAOL-Instance". SSH into the instance using the key file  that you have previously downloaded
 
