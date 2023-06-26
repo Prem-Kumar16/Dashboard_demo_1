@@ -52,7 +52,7 @@ If you go to ec2 instances page, you will find a newly created instance named "E
 
 After connected to the instance via SSH, run the below command 
 
-Note : Give the access & secret access key to the instance via "aws configure" command & the default region name must be ap-south-1
+Note : Give the access key ID & secret access key to the instance via "aws configure" command & the default region name must be ap-south-1
 
 ```sh
 aws configure
