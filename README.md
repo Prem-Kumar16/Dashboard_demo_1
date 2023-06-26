@@ -83,6 +83,8 @@ The below command helps you to run the pod
 sudo kubectl apply -f deployaws.yaml -f servicedeploy.yaml
 ```
 
+Please wait for atleast 2 minutes for the pod to pull image and deploy
+
 If you want to know the status of pods, the below commands will help you
 
 ```sh
