@@ -18,7 +18,7 @@ Please open the below link in new tab to ease the process
 
 Acknowledge the creation of the stack and press the button **Create stack** on the bottom right. 
 
-The ```demo-1-dashboard``` CloudFormation stack will take about **2 minutes** to be created.
+The ```demo-1-dashboard``` CloudFormation stack will take about **2 minutes** to be created. This cloudformation stack creates an ec2 instance named "EWAOL-Instance" to deploy the demo, a security group, a key pair and it also associates the ec2 instance with the already created elastic IP.
 
 ### Locally downloading the Private key file
 
