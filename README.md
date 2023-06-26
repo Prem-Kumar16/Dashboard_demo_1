@@ -90,7 +90,12 @@ sudo kubectl get pods
 sudo kubectl describe pods
 ```
 
+Image for command "sudo kubectl get pods"
 <img width="708" alt="Screenshot 2023-06-20 125640" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/98d61c11-cb78-4730-9f44-fc20044fe691">
+
+Image for command "sudo kubectl describe pods"
+![Screenshot (137)](https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/df55fdea-98b4-4e50-b168-310305fb1bd2)
+
 
 To visualize the dashboard running in your ec2 instance, run the commands below (Please run the command one by one) 
 
