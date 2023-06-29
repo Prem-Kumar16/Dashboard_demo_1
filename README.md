@@ -127,5 +127,5 @@ From [CloudFormation](https://console.aws.amazon.com/cloudformation/home) just d
 Do not forget to delete the downloaded keypair in cloudshell by running the below command
 
 ```sh
-rm keypair-for-ewaol.pem
+rm keypair-for-ewaol-demo1.pem
 ```
