@@ -110,7 +110,7 @@ sudo kubectl exec -it canapp /bin/sh
 node car.js
 ```
 
-Now copy the below url and paste it in any browser to see the demo running
+Now copy the below url and paste it in any browser to see the demo running (This is the IP address of ec2 instance where your demo is running)
 
 ```sh
 http://13.126.233.234:3000/
