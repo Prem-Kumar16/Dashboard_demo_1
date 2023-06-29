@@ -14,7 +14,7 @@ Deploy EC2 in Mumbai region
 
 Please open the below link in new tab to ease the process
 
-[![Launch](https://samdengler.github.io/cloudformation-launch-stack-button-svg/images/ap-south-1.svg)](https://ap-south-1.console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/quickcreate?templateURL=https%3A%2F%2Fs3.ap-south-1.amazonaws.com%2Fcf-templates-fui01m96flo3-ap-south-1%2F2023-06-26T065811.264Z4ws-demo-1-dashboard-ec2-template.yml&stackName=demo-1-dashboard)
+[![Launch](https://samdengler.github.io/cloudformation-launch-stack-button-svg/images/ap-south-1.svg)](https://ap-south-1.console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/quickcreate?templateURL=https%3A%2F%2Fs3.ap-south-1.amazonaws.com%2Fcf-templates-fui01m96flo3-ap-south-1%2F2023-06-29T122523.614Z86v-demo-1-dashboard-ec2-template.yml&stackName=demo-1-dashboard)
 
 Acknowledge the creation of the stack and press the button **Create stack** on the bottom right. 
 
@@ -27,7 +27,7 @@ Follow the steps below to download the private .pem key file to SSH into the ins
 Open cloudshell and run the following command
 
 ```sh 
-aws ec2 describe-key-pairs --filters Name=key-name,Values=keypair-for-ewaol --query KeyPairs[*].KeyPairId --output text
+aws ec2 describe-key-pairs --filters Name=key-name,Values=keypair-for-ewaol-demo1 --query KeyPairs[*].KeyPairId --output text
 ```
 
 The output will be the key ID. Note down it
@@ -37,14 +37,18 @@ Run the below command to save .pem file in the cloudshell directory
 Change the keyid paramater to the output of previous command
 
 ```sh
-aws ssm get-parameter --name /ec2/keypair/<keyid here> --with-decryption --query Parameter.Value --output text > keypair-for-ewaol.pem
+aws ssm get-parameter --name /ec2/keypair/<keyid here> --with-decryption --query Parameter.Value --output text > keypair-for-ewaol-demo1.pem
 ```
 
-<img width="911" alt="Screenshot 2023-06-16 085413" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/d3d6379a-c1bf-4ca0-abd4-f8978f98e16e">
 
-Go to actions -> download file and paste this path "/home/cloudshell-user/keypair-for-ewaol.pem" inside the path field to save .pem key file locally
+<img width="953" alt="Screenshot 2023-06-29 180231" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/40dd6540-1540-4719-b1ac-86324fde9f8b">
 
-<img width="516" alt="Screenshot 2023-06-16 090012" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/5618f31a-8193-4bdf-aa66-a4be0688886d">
+
+Go to actions -> download file and paste this path "/home/cloudshell-user/keypair-for-ewaol-demo1.pem" inside the path field to save .pem key file locally
+
+
+<img width="458" alt="Screenshot 2023-06-29 180510" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/55c0a283-5337-4f9e-87d8-e9a9c46d8d0a">
+
 
 If you go to ec2 instances page, you will find a newly created instance named "EWAOL-Instance". SSH into the instance using the key file  that you have previously downloaded
 
