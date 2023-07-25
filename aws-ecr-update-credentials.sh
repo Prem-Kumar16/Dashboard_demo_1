@@ -1,7 +1,7 @@
 sudo /usr/local/bin/kubectl delete pod canapp
 sudo /usr/local/bin/kubectl delete service canapp-app-service
-aws configure set aws_access_key_id <your_aws_access_key_id_here>
-aws configure set aws_secret_access_key <your_aws_secret_access_key_here>
+aws configure set aws_access_key_id $(aws --profile default configure get aws_access_key_id)
+aws configure set aws_secret_access_key $(aws --profile default configure get aws_secret_access_key)
 aws configure set default.region ap-south-1
 sudo /usr/local/bin/kubectl delete secret regcred
 sudo /usr/local/bin/kubectl create secret docker-registry regcred \
