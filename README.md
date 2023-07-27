@@ -60,36 +60,24 @@ Note : Give the access key ID & secret access key to the instance via "aws confi
 
 ```sh
 aws configure
-cd Dashboard_demo_1/
 ```
 
-Run the below steps to log into ECR Repository for pulling images from it
+After the aws configuration step, launch the below cloudformation stack which will create all the necessary developer tools and creates a whole codepipeline.
 
-```sh
-AWS_DEFAULT_REGION=ap-south-1
-PASS=$(aws ecr get-login-password --region $AWS_DEFAULT_REGION)
-```
+Please open the below link in new tab to ease the process
 
-Create a kubectl secret 
+[![Launch](https://samdengler.github.io/cloudformation-launch-stack-button-svg/images/ap-south-1.svg)](https://ap-south-1.console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/quickcreate?templateURL=https%3A%2F%2Fs3.ap-south-1.amazonaws.com%2Fcf-templates-fui01m96flo3-ap-south-1%2F2023-07-26T112423.424Zqro-codepipeline_cfn_template.yaml&stackName=codepipeline-demo-1)
 
-```sh
-sudo kubectl create secret docker-registry regcred \
-   --docker-server=783584839454.dkr.ecr.ap-south-1.amazonaws.com \
-   --docker-username=AWS \
-   --docker-password=$PASS
-```
+Acknowledge the creation of the stack and press the button **Create stack** on the bottom right. 
 
-<img width="748" alt="Screenshot 2023-06-20 125347" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/cb8a36ca-05ad-45b2-9782-be832afc7acf">
+The ```codepipeline-demo-1``` CloudFormation stack will take about **2 minutes** to be created.
 
-The below command helps you to run the pod
+After the creation of the stack, go to the codePipeline management console, You will see a pipeline named **autodemocodepipeline** created. Wait for it to be completed.
 
-```sh
-sudo kubectl apply -f deployaws.yaml -f servicedeploy.yaml
-```
+<img width="662" alt="Screenshot 2023-07-27 084106" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/82cfe7ca-f95f-4bce-8aee-cfb551c5bb21">
 
-Please wait for atleast 2 minutes for the pod to pull image and deploy
 
-If you want to know the status of pods, the below commands will help you
+If you want to know the status of pods, the below commands in the ec2 instance will help you
 
 ```sh
 sudo kubectl get pods
