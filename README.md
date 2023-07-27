@@ -110,7 +110,35 @@ You should see something similar to the below gif
 
 ### Cleanup
 
-From [CloudFormation](https://console.aws.amazon.com/cloudformation/home) just delete `demo-1-dashboard` stack.
+From [CloudFormation](https://console.aws.amazon.com/cloudformation/home) delete `codepipeline-demo-1` stack.
+
+<img width="471" alt="Screenshot 2023-07-27 064719" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/526be2be-2b9d-4080-9445-fc97430afbf4">
+
+
+
+<img width="452" alt="Screenshot 2023-07-27 064800" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/16a50a52-0c7e-485f-afcc-a644c29e8b7d">
+
+
+If the delete is failed, go to the resources tab under `codepipeline-demo-1` stack and open the ECR Repository in a new tab.
+
+<img width="367" alt="Screenshot 2023-07-27 070006" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/4f20c65e-81b1-47e3-9d02-40e1d1919af3">
+
+Choose delete stack ageain. This time a message appears to retain the resources. Choose to retain and click delete.
+
+<img width="469" alt="Screenshot 2023-07-27 065902" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/033185b8-33b5-468e-b82d-26c94418bc83">
+
+
+<img width="455" alt="Screenshot 2023-07-27 070128" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/28074d9e-055f-4e17-ba3b-d19c7967cbc7">
+
+
+Now the `codepipeline-demo-1` stack will be deleted. 
+
+Go to the ECR Repo page that you have already opened in new tab and delete the **autodemo** repo.
+
+<img width="705" alt="Screenshot 2023-07-27 070235" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/a1e1220b-29a4-4bbf-94db-dac18a7df999">
+
+
+Then delete `demo-1-dashboard` stack.
 
 Do not forget to delete the downloaded keypair in cloudshell by running the below command
 
