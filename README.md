@@ -123,7 +123,7 @@ If the delete is failed, go to the resources tab under `codepipeline-demo-1` sta
 
 <img width="367" alt="Screenshot 2023-07-27 070006" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/4f20c65e-81b1-47e3-9d02-40e1d1919af3">
 
-Choose delete stack ageain. This time a message appears to retain the resources. Choose to retain and click delete.
+Choose delete stack again. This time a message appears to retain the resources. Choose to retain and click delete.
 
 <img width="469" alt="Screenshot 2023-07-27 065902" src="https://github.com/Prem-Kumar16/Dashboard_demo_1/assets/75419846/033185b8-33b5-468e-b82d-26c94418bc83">
 
